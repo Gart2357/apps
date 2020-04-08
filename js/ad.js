@@ -26,7 +26,7 @@ function ad()
         fct[i] = 0;
         while (nn % i){
             nn /= i;
-            fct[i]++;
+            fct[i] += 1;
         }
     }
 
