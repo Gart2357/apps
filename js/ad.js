@@ -43,7 +43,7 @@ function ad()
     }, fct);
 
     if (n == 57){
-        alert(fcts.slice(0, -2) + '\n' + n + '\'=' + d + '/nただし結果は正確でない可能性があります。';
+        alert(fcts.slice(0, -2) + '\n' + n + '\'=' + d + '/nただし結果は正確でない可能性があります。');
     }else{
         alert(fcts.slice(0, -2) + '\n' + n + '\'=' + d);
     }
