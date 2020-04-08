@@ -19,7 +19,7 @@ function ad()
     var nn = n;
     var fct = {};
     for (var i = 2; i <= n; i++){
-        if (!is_prime(i) || nn % i){
+        if (!is_prime[i] || nn % i){
             continue;
         }
 
