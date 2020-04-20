@@ -1,5 +1,3 @@
-import {nim_ad_sub} from './nim_ad_sub'
-
 function nim_ad()
 {
     var n = parseInt(document.forms.ad_form.textbox.value);
