@@ -1,6 +1,6 @@
 function nim_ad()
 {
-    var n = parseInt(document.forms.ad_form.textbox.value);
+    var n = parseInt(document.forms.nim_ad_form.textbox.value);
     if (!n || n < 1){
         alert('正整数のみ対応しています');
         return;
