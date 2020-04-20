@@ -1,4 +1,4 @@
-import {nim_ad_sub} from modules
+import {nim_ad_sub} from './nim_ad_sub'
 
 function nim_ad()
 {

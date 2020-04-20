@@ -480,7 +480,7 @@ function raiseOverflow() {
 
   
 }
-export function nim_ad_sub(n_936016) {
+function nim_ad_sub(n_936016) {
   var result_936017 = 0;
 
   var F={procname:"ad.nim_ad_sub",prev:framePtr,filename:"ad.nim",line:0};
