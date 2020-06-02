@@ -1,0 +1,32 @@
+body{
+    /* 背景をグラデーションにする */
+    background: linear-gradient(45deg, #10100E, rgb(0, 66, 92));
+    color:#cccccc;
+}
+
+ div.imgt {
+    position:absolute;
+    top:1em;
+    left:20em;
+    padding: 0px;
+ }
+ p.title {
+     font-family: 'Arial Black','ヒラギノ角ゴシック','Hiragino Sans','メイリオ', Meiryo,'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+     color: #eaf4fc;
+     font-size:4em;
+     line-height:80%;
+     margin: 0px;
+ }
+
+ div.menu {
+     position:absolute;
+     top:4em;
+     left:3em;
+     border:1px solid;
+     padding:10px;
+     font-size: 2em;
+     line-height:120%;
+     font-family: 'Arial Black','ヒラギノ角ゴシック','Hiragino Sans','メイリオ', Meiryo,'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
+     color:#cccccc;
+     background-color:black;
+ }
