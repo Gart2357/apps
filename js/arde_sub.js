@@ -286,18 +286,18 @@ function modInt(a_230475, b_230476) {
 
   
 }
-function divInt(a_230457, b_230458) {
-        if (b_230458 == 0) raiseDivByZero();
-    if (b_230458 == -1 && a_230457 == 2147483647) raiseOverflow();
-    return Math.trunc(a_230457 / b_230458);
-  
-
-  
-}
 function addInt(a_230403, b_230404) {
         var result = a_230403 + b_230404;
     if (result > 2147483647 || result < -2147483648) raiseOverflow();
     return result;
+  
+
+  
+}
+function divInt(a_230457, b_230458) {
+        if (b_230458 == 0) raiseDivByZero();
+    if (b_230458 == -1 && a_230457 == 2147483647) raiseOverflow();
+    return Math.trunc(a_230457 / b_230458);
   
 
   
@@ -397,13 +397,13 @@ function aux_write_stack_trace_160038(f_160040) {
     
     L6: do {
       var j_175236 = 0;
-      var colontmp__945264 = 0;
-      colontmp__945264 = (i_160051 - 1);
-      var res_945269 = colontmp__945264;
+      var colontmp__940038 = 0;
+      colontmp__940038 = (i_160051 - 1);
+      var res_940043 = colontmp__940038;
       L7: do {
           L8: while (true) {
-          if (!(0 <= res_945269)) break L8;
-            j_175236 = res_945269;
+          if (!(0 <= res_940043)) break L8;
+            j_175236 = res_940043;
             add_142042(result_160041, 0, temp_frames_160060[j_175236].Field0);
             if ((0 < temp_frames_160060[j_175236].Field1)) {
             if (result_160041[0] != null) { result_160041[0] = (result_160041[0]).concat(makeNimstrLit(", line: ")); } else { result_160041[0] = makeNimstrLit(", line: "); };
@@ -411,7 +411,7 @@ function aux_write_stack_trace_160038(f_160040) {
             }
             
             if (result_160041[0] != null) { result_160041[0] = (result_160041[0]).concat(makeNimstrLit("\x0A")); } else { result_160041[0] = makeNimstrLit("\x0A"); };
-            res_945269 -= 1;
+            res_940043 -= 1;
           }
       } while(false);
     } while(false);
@@ -480,67 +480,54 @@ function raiseOverflow() {
 
   
 }
-function nim_ad_sub(n_936016) {
+function arde_sub(n_936016) {
   var result_936017 = 0;
 
-  var F={procname:"ad.nim_ad_sub",prev:framePtr,filename:"ad.nim",line:0};
+  var F={procname:"arde.arde_sub",prev:framePtr,filename:"arde.nim",line:0};
   framePtr = F;
-    if ((n_936016 == 0)) {
+    if ((n_936016 <= 0)) {
     F.line = 6;
-    raiseException({message: makeNimstrLit("Arithmetic Derivative of 0 is Undefined"), parent: null, m_type: NTI6217, name: null, trace: null, up: null}, "Exception");
+    raiseException({message: makeNimstrLit("Input a positive integer"), parent: null, m_type: NTI6217, name: null, trace: null, up: null}, "Exception");
     }
     
     F.line = 8;
     var tmp_940002 = n_936016;
     L1: do {
-      F.line = 9;
-        L2: while (true) {
-        if (!!((tmp_940002 == 1))) break L2;
-          if ((modInt(tmp_940002, 2) == 0)) {
-          F.line = 11;
-          tmp_940002 = divInt(tmp_940002, 2);
-          F.line = 12;
-          result_936017 = addInt(result_936017, divInt(n_936016, 2));
-          }
-          else {
-            L3: do {
-              L4: do {
-                F.line = 15;
-                var i_945221 = 0;
-                F.line = 39;
-                var colontmp__945255 = 0;
-                F.line = 15;
-                colontmp__945255 = Math.sqrt(tmp_940002);
-                F.line = 61;
-                var res_945258 = 3;
-                L5: do {
-                  F.line = 62;
-                    L6: while (true) {
-                    if (!(res_945258 <= colontmp__945255)) break L6;
-                      F.line = 15;
-                      i_945221 = res_945258;
-                      if ((modInt(tmp_940002, i_945221) == 0)) {
-                      F.line = 17;
-                      result_936017 = addInt(result_936017, divInt(n_936016, i_945221));
-                      F.line = 18;
-                      tmp_940002 = divInt(tmp_940002, i_945221);
-                      F.line = 19;
-                      break L3;
-                      }
-                      
-                      F.line = 64;
-                      res_945258 = addInt(res_945258, 2);
+      L2: do {
+        F.line = 10;
+        var i_940004 = 0;
+        F.line = 88;
+        var colontmp__940031 = 0;
+        F.line = 10;
+        colontmp__940031 = Math.sqrt(tmp_940002);
+        F.line = 94;
+        var res_940033 = 2;
+        L3: do {
+          F.line = 95;
+            L4: while (true) {
+            if (!(res_940033 <= colontmp__940031)) break L4;
+              F.line = 10;
+              i_940004 = res_940033;
+              L5: do {
+                F.line = 11;
+                  L6: while (true) {
+                  if (!(modInt(tmp_940002, i_940004) == 0)) break L6;
+                    F.line = 12;
+                    result_936017 = addInt(result_936017, divInt(n_936016, i_940004));
+                    F.line = 13;
+                    tmp_940002 = divInt(tmp_940002, i_940004);
+                    if ((tmp_940002 == 1)) {
+                    F.line = 15;
+                    break L1;
                     }
-                } while(false);
+                    
+                  }
               } while(false);
-            } while(false);
-            F.line = 21;
-            result_936017 = addInt(result_936017, divInt(n_936016, tmp_940002));
-            F.line = 22;
-            tmp_940002 = 1;
-          }
-          
-        }
+              F.line = 97;
+              res_940033 = addInt(res_940033, 1);
+            }
+        } while(false);
+      } while(false);
     } while(false);
   framePtr = F.prev;
 
